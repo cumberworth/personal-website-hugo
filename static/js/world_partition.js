@@ -939,9 +939,6 @@ async function init() {
     const { W, H, dpr } = state;
     canvas.width = W * dpr;
     canvas.height = H * dpr;
-    canvas.style.width = W + 'px';
-    canvas.style.height = H + 'px';
-
     const worldData = await loadWorldData();
     state.worldData = worldData;
 
