@@ -1,0 +1,56 @@
+[[experience]]
+title = "Postdoctoral Researcher"
+organization = "AMOLF"
+city = "Amsterdam"
+country = "Netherlands"
+start_month = "January"
+start_year = 2020
+end_month = ""
+end_year = ""
+description = [
+  "Developed a theoretical model of spontaneous actin-ring constriction both to study more general physics involved and to make predictions relevant to synthetic biologists (paper under review)",
+  "Collaborated with experimentalist to derive theory to explain results of single-molecule tracking experiments of protein-protein interactions (paper under review)",
+  "Wrote the research group's data-management plan and reproducibility best-practices guide",
+]
+
+[[experience]]
+title = "Marie Skłodowska-Curie Early Stage Researcher"
+organization = "University of Cambridge"
+city = "Cambridge"
+country = "United Kingdom"
+start_month = "October"
+start_year = 2015
+end_month = "September"
+end_year = 2019
+description = [
+  "Developed, implemented from scratch, and published a new model and statistical sampling methods for a class of structural DNA nanotechnology (DNA origami)",
+  "Published in a high impact journal results from simulations with the model and methods about how this class of systems self-assembles (work on this continued during the above postdoc)",
+  "Initiated and led an international collaboration with a research group in Sweden",
+]
+
+[[experience]]
+title = "Genome Science and Technology Program Student"
+organization = "University of British Columbia"
+city = "Vancouver"
+country = "Canada"
+start_month = "September"
+start_year = 2012
+end_month = "May"
+end_year = 2015
+description = [
+  "Tested a fundamental aspect of a class of molecular models and found many popular models to be invalid in a commonly used context (implicit solvent models for protein folding)",
+  "Published two first-author papers (one of which has been cited over 180 times), two middle-author papers, and coauthored a textbook chapter",
+]
+
+[[experience]]
+title = "Summer School in Computational Biology Student"
+organization = "University of Oxford"
+city = "Oxford"
+country = "United Kingdom"
+start_month = "July"
+start_year = 2012
+end_month = "August"
+end_year = 2012
+description = [
+  "Benchmarked statistical models for predicting biomolecular structure from genomic information",
+]

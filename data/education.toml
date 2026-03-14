@@ -1,0 +1,26 @@
+[[education]]
+degree = "PhD"
+specialization ="Computational Chemistry"
+university = "University of Cambridge"
+start_year = 2015
+end_year = 2020
+thesis = "Simulations of DNA origami self-assembly with a lattice model"
+supervisor = "Daan Frenkel"
+
+[[education]]
+degree = "MSc"
+specialization = "Genome Science and Technology"
+university = "University of British Columbia"
+start_year = 2012
+end_year = 2015
+thesis = "Implicit solvent models and free energies of solvation in the context of protein folding"
+supervisor = "Joerg Gsponer"
+
+[[education]]
+degree = "BSc"
+specialization = "Combined Honours in Biochemistry and Chemistry"
+university = "University of British Columbia"
+start_year = 2008
+end_year = 2012
+thesis = "The structural and dynamical basis of the autoinhibitory effects of the intrinsically disordered SRR region of the Ets-1 transcription factor"
+supervisor = "Joerg Gsponer"

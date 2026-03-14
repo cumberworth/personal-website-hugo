@@ -1,0 +1,103 @@
+[[publication]]
+type = "article"
+title = "Constriction of actin rings by passive crosslinkers"
+authors = ["A. Cumberworth", "P. R. ten Wolde"]
+position = 1
+journal = "Phys. Rev. Lett."
+year = 2023
+
+[[publication]]
+type = "article"
+title = "DNA-PAINT single-particle tracking (DNA-PAINT-SPT) enables extended single-molecule studies of membrane protein interactions"
+authors = [
+  "C. Niederauer",
+  "C. Nguyen",
+  "M. Wang-Henderson",
+  "J. Stein",
+  "S. Strauss",
+  "A. Cumberworth",
+  "F. Stehr",
+  "R. Jungmann",
+  "P. Schwille",
+  "K.A. Ganzinger",
+]
+position = 6
+journal = "Nat. Commun."
+year = 2023
+
+[[publication]]
+type = "article"
+title = "Simulations of DNA-origami self-assembly reveal design-dependent nucleation barriers"
+authors = ["A. Cumberworth", "D. Frenkel", "A. Reinhardt"]
+position = 1
+journal = "Nano Lett."
+volume = 22
+pages = [6916]
+year = 2022
+doi = "10.1021/acs.nanolett.2c01372"
+
+[[publication]]
+type = "article"
+title = "Lattice models and Monte Carlo methods for simulating DNA origami self-assembly"
+authors = ["A. Cumberworth", "A. Reinhardt", "D. Frenkel"]
+position = 1
+journal = "J. Chem. Phys."
+volume = 149
+pages = [123905]
+year = 2018
+doi = "10.1063/1.5051835"
+
+[[publication]]
+type = "article"
+title = "Free energies of solvation in the context of protein folding: implications for implicit and explicit solvent models"
+authors = ["A. Cumberworth", "J.M. Bui", "J. Gsponer"]
+position = 1
+journal = "J. Comput. Chem."
+volume = 37
+pages = [629, 640]
+year = 2016
+doi = "10.1002/jcc.24235"
+
+[[publication]]
+type = "article"
+title = "Bayesian analysis of continuous time Markov chains with application to phylogenetic modelling"
+authors = ["T. Zhao", "Z. Wang", "A. Cumberworth", "J. Gsponer", "N. Freitas", "A. Bouchard-Côté"]
+position = 3
+journal = "Baysian Anal."
+volume = 11
+page = [1203, 1237]
+year = 2016
+doi = "10.1214/15-BA982"
+
+[[publication]]
+type = "book-chapter"
+book_title = "Bridging experiments and simulations: structure calculations with a dynamical touch"
+chapter_title = "Computational Approaches to Protein Dynamics: From Quantum to Coarse-Grained Methods"
+authors = ["F. Heinkel", "A. Cumberworth", "J. Gsponer"]
+position = 2
+editors = ["M. Fuxreiter"]
+publisher = "CRC Press"
+pages = [403, 427]
+year = 2014
+
+[[publication]]
+type = "article"
+title = "Promiscuity as a functional trait: intrinsically disordered regions as central players of interactomes"
+authors = ["A. Cumberworth", "G. Lamour", "M. Babu", "J. Gsponer"]
+position = 1
+journal = "Biochem. J."
+volume = 454
+pages = [361, 369]
+year = 2013
+doi = "10.1042/BJ20130545"
+
+[[publication]]
+type = "article"
+title = "Structure and intrinsic disorder in protein autoinhibition"
+authors = ["T. Trudeau", "R. Nassar", "A. Cumberworth", "E.T.C. Wong", "G. Woollard", "J. Gsponer"]
+position = 3
+journal = "Structure"
+volume = 21
+pages = [332, 341]
+year = 2013
+doi = "10.1016/j.str.2012.12.013"

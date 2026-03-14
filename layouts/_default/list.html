@@ -1,0 +1,11 @@
+{{ define "main" }}
+<h2 class="text-lg font-semibold mb-6">{{ .Title }}</h2>
+<ul class="space-y-3">
+    {{ range .Pages }}
+    <li>
+        <a href="{{ .Permalink }}" class="text-gray-800 hover:underline">{{ .Title }}</a>
+        <span class="text-sm text-gray-500 ml-2">{{ .Date.Format "2006-01-02" }}</span>
+    </li>
+    {{ end }}
+</ul>
+{{ end }}

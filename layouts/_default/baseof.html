@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ .Site.Title }}</title>
+    {{ $css := resources.Get "css/main.css" | css.PostCSS }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+</head>
+
+<body class="min-h-screen flex flex-col bg-white text-gray-900">
+    <header class="border-b border-gray-200">
+        <div class="max-w-3xl mx-auto px-4 py-6 flex items-baseline justify-between">
+            <a href="{{ .Site.Home.Permalink }}" class="no-underline">
+                <h1 class="text-xl font-semibold">{{ .Site.Title }}</h1>
+            </a>
+            <nav>
+                <ul class="flex gap-6 text-sm list-none">
+                    {{- range .Site.Menus.main }}
+                        <li><a href="{{ .URL }}" class="text-gray-600 hover:text-gray-900 hover:underline">{{ .Name }}</a></li>
+                    {{- end }}
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-1 max-w-3xl mx-auto px-4 py-8 w-full">
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    <footer class="text-sm text-gray-500 text-center py-6 border-t border-gray-200">
+        Designed by me and powered with the <a href="https://gohugo.io" class="underline hover:text-gray-700">Hugo static site generator</a>.
+    </footer>
+</body>
+
+</html>

@@ -2,3 +2,6 @@ list.txt
 notes.txt
 *swp
 *tags
+node_modules/
+resources/
+.hugo_build.lock

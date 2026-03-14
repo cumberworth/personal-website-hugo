@@ -1,0 +1,12 @@
+{{ define "main" }}
+<h2 class="text-lg font-semibold mb-6">Publications</h2>
+<ul class="space-y-4">
+    {{ range .Site.Data.publications.publication}}
+        {{- if eq .type "article" }}
+            {{- partial "article.html" . }}
+        {{- else if eq .type "book" }}
+            {{/* - partial "book.html" . */}}
+        {{- end }}
+    {{ end }}
+</ul>
+{{ end }}

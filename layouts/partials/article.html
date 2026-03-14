@@ -1,0 +1,14 @@
+<li class="text-sm leading-relaxed">{{- $authorslen := (len .authors) }}
+{{- range $i, $author := .authors}}
+    {{- if eq $i (sub $.position 1) -}}
+        <strong>{{- $author}}</strong>
+    {{- else }}
+        {{- $author}}
+    {{- end }}
+    {{- if eq $i (sub $authorslen 1)}}
+        {{- `. `}}
+    {{- else }}
+        {{- `, `}}
+    {{- end}}
+{{- end }}
+{{- .title }}. <a href="https://www.doi.org/{{ .doi }}" class="underline hover:text-gray-600"><em>{{ .journal }}</em>. <strong>{{ .volume}}</strong>, {{ index .page 0 }} ({{ .year }})</a></li>

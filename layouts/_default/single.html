@@ -1,0 +1,9 @@
+{{ define "main" }}
+<article>
+    <h2 class="text-xl font-semibold mb-2">{{ .Title }}</h2>
+    {{ with .Date }}<p class="text-sm text-gray-500 mb-6">{{ .Format "2 January 2006" }}</p>{{ end }}
+    <div class="text-gray-800 leading-relaxed space-y-4">
+        {{ .Content }}
+    </div>
+</article>
+{{ end }}
