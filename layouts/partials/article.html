@@ -11,4 +11,4 @@
         {{- `, `}}
     {{- end}}
 {{- end }}
-{{- .title }}. <a href="https://www.doi.org/{{ .doi }}" class="underline hover:text-gray-600"><em>{{ .journal }}</em>. <strong>{{ .volume}}</strong>, {{ index .page 0 }} ({{ .year }})</a></li>
+{{- .title }}. <a href="https://www.doi.org/{{ .doi }}" class="underline hover:text-gray-600"><em>{{ .journal }}</em> <strong>{{ .volume}}</strong>, {{ index .pages 0 }} ({{ .year }})</a></li>

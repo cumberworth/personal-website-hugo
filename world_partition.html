@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World Map Partitions</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 1rem;
+      background: #1a1a2e;
+      color: #e0e0e0;
+      font-family: system-ui, sans-serif;
+    }
+
+    .world-partition {
+      max-width: 920px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #c8d8e8;
+      margin: 0 0 0.75rem;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.5rem;
+      align-items: center;
+      margin-bottom: 0.75rem;
+      padding: 0.6rem 0.8rem;
+      background: rgba(255,255,255,0.06);
+      border-radius: 8px;
+    }
+
+    .control-group {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.88rem;
+    }
+
+    label {
+      color: #aac;
+      white-space: nowrap;
+    }
+
+    input[type=range] {
+      width: 110px;
+      accent-color: #7ab8d4;
+    }
+
+    .val {
+      min-width: 1.8rem;
+      text-align: right;
+      color: #e8f0f8;
+      font-weight: 600;
+    }
+
+    button#generateBtn {
+      padding: 0.4rem 1.1rem;
+      background: #3a6a8a;
+      color: #e8f4ff;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    button#generateBtn:hover:not(:disabled) {
+      background: #4a8aaa;
+    }
+
+    button#generateBtn:disabled {
+      opacity: 0.5;
+      cursor: default;
+    }
+
+    .canvas-wrapper {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+
+    #worldMap {
+      display: block;
+      width: 100%;
+      height: auto;
+      cursor: crosshair;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 0.5rem;
+      font-size: 0.82rem;
+      color: #8898a8;
+    }
+
+    #coordDisplay {
+      color: #b8d0e8;
+    }
+
+    #statusMsg {
+      color: #7a9aaa;
+    }
+  </style>
+</head>
+<body>
+  <div class="world-partition">
+    <h1>World Map — Random Partitions</h1>
+
+    <div class="controls">
+      <div class="control-group">
+        <label for="numCurves">Curves</label>
+        <input type="range" id="numCurves" min="0" max="10" value="4" step="1">
+        <span class="val" id="numCurvesVal">4</span>
+      </div>
+      <div class="control-group">
+        <label for="numLoops">Loops</label>
+        <input type="range" id="numLoops" min="0" max="5" value="2" step="1">
+        <span class="val" id="numLoopsVal">2</span>
+      </div>
+      <div class="control-group">
+        <label for="curvature">Curvature</label>
+        <input type="range" id="curvature" min="3" max="30" value="12" step="1">
+        <span class="val" id="curvatureVal">12</span>
+      </div>
+      <label class="control-label" style="display:flex; align-items:center; gap:6px; cursor:pointer;">
+        <input type="checkbox" id="usePopDensity" checked>
+        Population density weighted
+      </label>
+      <button id="generateBtn">Generate New Map</button>
+    </div>
+
+    <div class="canvas-wrapper">
+      <canvas id="worldMap"></canvas>
+    </div>
+
+    <div class="footer">
+      <span id="coordDisplay">Click a region to find your birthplace…</span>
+      <span id="statusMsg">Loading…</span>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
+  <script src="world_partition.js"></script>
+</body>
+</html>

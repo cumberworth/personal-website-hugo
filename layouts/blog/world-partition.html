@@ -1,0 +1,142 @@
+{{ define "mainWidth" }}max-w-5xl{{ end }}
+{{ define "main" }}
+<article>
+    <h2 class="text-xl font-semibold mb-2">{{ .Title }}</h2>
+    {{ with .Date }}<p class="text-sm text-gray-500 mb-6">{{ .Format "2 January 2006" }}</p>{{ end }}
+
+    <div class="text-gray-800 leading-relaxed space-y-4 mb-8">
+        {{ .Content }}
+    </div>
+
+    <style>
+    .world-partition {
+        max-width: 920px;
+        margin: 0 auto;
+        background: #1a1a2e;
+        color: #e0e0e0;
+        font-family: system-ui, sans-serif;
+        padding: 1rem;
+        border-radius: 8px;
+    }
+    .world-partition h1 {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #c8d8e8;
+        margin: 0 0 0.75rem;
+    }
+    .world-partition .controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem 1.5rem;
+        align-items: center;
+        margin-bottom: 0.75rem;
+        padding: 0.6rem 0.8rem;
+        background: rgba(255,255,255,0.06);
+        border-radius: 8px;
+    }
+    .world-partition .control-group {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.88rem;
+    }
+    .world-partition label {
+        color: #aac;
+        white-space: nowrap;
+    }
+    .world-partition input[type=range] {
+        width: 110px;
+        accent-color: #7ab8d4;
+    }
+    .world-partition .val {
+        min-width: 1.8rem;
+        text-align: right;
+        color: #e8f0f8;
+        font-weight: 600;
+    }
+    .world-partition button#generateBtn {
+        padding: 0.4rem 1.1rem;
+        background: #3a6a8a;
+        color: #e8f4ff;
+        border: none;
+        border-radius: 6px;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: background 0.15s;
+    }
+    .world-partition button#generateBtn:hover:not(:disabled) {
+        background: #4a8aaa;
+    }
+    .world-partition button#generateBtn:disabled {
+        opacity: 0.5;
+        cursor: default;
+    }
+    .world-partition .canvas-wrapper {
+        position: relative;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+    .world-partition #worldMap {
+        display: block;
+        width: 100%;
+        height: auto;
+        cursor: crosshair;
+    }
+    .world-partition .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 0.5rem;
+        font-size: 0.82rem;
+        color: #8898a8;
+    }
+    .world-partition #coordDisplay {
+        color: #b8d0e8;
+    }
+    .world-partition #statusMsg {
+        color: #7a9aaa;
+    }
+    </style>
+
+    <div class="world-partition">
+        <h1>World Map — Random Partitions</h1>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="numCurves">Curves</label>
+                <input type="range" id="numCurves" min="0" max="10" value="4" step="1">
+                <span class="val" id="numCurvesVal">4</span>
+            </div>
+            <div class="control-group">
+                <label for="numLoops">Loops</label>
+                <input type="range" id="numLoops" min="0" max="5" value="2" step="1">
+                <span class="val" id="numLoopsVal">2</span>
+            </div>
+            <div class="control-group">
+                <label for="curvature">Curvature</label>
+                <input type="range" id="curvature" min="3" max="30" value="12" step="1">
+                <span class="val" id="curvatureVal">12</span>
+            </div>
+            <label class="control-label" style="display:flex; align-items:center; gap:6px; cursor:pointer;">
+                <input type="checkbox" id="usePopDensity" checked>
+                Population density weighted
+            </label>
+            <button id="generateBtn">Generate New Map</button>
+        </div>
+
+        <div class="canvas-wrapper">
+            <canvas id="worldMap"></canvas>
+        </div>
+
+        <div class="footer">
+            <span id="coordDisplay">Click a region to find your birthplace…</span>
+            <span id="statusMsg">Loading…</span>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
+    <script src="/js/world_partition.js"></script>
+</article>
+{{ end }}

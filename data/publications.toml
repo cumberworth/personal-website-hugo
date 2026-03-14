@@ -65,7 +65,7 @@ authors = ["T. Zhao", "Z. Wang", "A. Cumberworth", "J. Gsponer", "N. Freitas", "
 position = 3
 journal = "Baysian Anal."
 volume = 11
-page = [1203, 1237]
+pages = [1203, 1237]
 year = 2016
 doi = "10.1214/15-BA982"
 

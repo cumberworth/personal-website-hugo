@@ -25,12 +25,11 @@
         </div>
     </header>
 
-    <main class="flex-1 max-w-3xl mx-auto px-4 py-8 w-full">
+    <main class="flex-1 {{ block "mainWidth" . }}max-w-3xl{{ end }} mx-auto px-4 py-8 w-full">
         {{ block "main" . }}{{ end }}
     </main>
 
     <footer class="text-sm text-gray-500 text-center py-6 border-t border-gray-200">
-        Designed by me and powered with the <a href="https://gohugo.io" class="underline hover:text-gray-700">Hugo static site generator</a>.
     </footer>
 </body>
 
