@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "none",
+    "moduleResolution": "node",
+    "lib": ["DOM", "ES2020"],
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "outDir": "./static/js",
+    "rootDir": "./ts",
+    "removeComments": false,
+    "sourceMap": false,
+    "skipLibCheck": true,
+    "types": ["d3", "topojson-client", "geojson"]
+  },
+  "include": ["ts/world_partition.ts", "ts/globals.d.ts"]
+}

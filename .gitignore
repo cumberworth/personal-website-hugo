@@ -2,6 +2,7 @@ list.txt
 notes.txt
 *swp
 *tags
+*tif
 node_modules/
 resources/
 .hugo_build.lock
